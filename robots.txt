@@ -1,0 +1,2 @@
+Aser-Agent: *
+Allow: /
