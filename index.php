@@ -5,7 +5,9 @@ while ($file = readdir($handler))
   if ($file != "." && $file != "..")
     $img[] = $file;
 closedir($handler);
-?><html>
+?>
+<!DOCTYPE html>
+<html>
 <head>
    <title>Our GNU/Lord and GNU/Savior is 100% sexy!</title>
    <meta http-equiv="refresh" content="3;https://rms.sexy/">	
