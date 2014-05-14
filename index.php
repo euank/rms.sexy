@@ -10,7 +10,7 @@ closedir($handler);
 <html>
 <head>
    <title>Our GNU/Lord and GNU/Savior is 100% sexy!</title>
-   <meta content="https://rms.sexy/404.jpg" name"twitter:image"></meta>
+   <meta http-equiv="refresh" content="3;https://rms.sexy/"></meta>
    <!--
        I'm too lazy to make the html pretty for now... Maybe when I've drank
        enough booze and I have nothing to do... Or if people start nagging  
