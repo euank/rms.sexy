@@ -31,7 +31,8 @@ closedir($handler);
    .donate {
      padding: 10px;
      padding-right: 30px;
-     float: right; 
+     z-index: 100;
+     position: absolute;
    }
    </style>
 </head>
