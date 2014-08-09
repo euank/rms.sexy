@@ -17,7 +17,7 @@ closedir($handler);
      background-image: url("/noise.png");
    }
 
-   img {
+   .stallman {
      text-align: center;
      position: absolute;
      margin: auto;
@@ -27,9 +27,16 @@ closedir($handler);
      left: 0;
      image-orientation: from-image;
    }
+
+   .donate {
+     padding: 10px;
+     padding-right: 30px;
+     float: right; 
+   }
    </style>
 </head>
 <body>
+   <a href="https://donate.fsf.org/"><img class="donate" src="https://rms.sexy/donate.png" alt="Donate!" title="Donate to the FSF!"></a>
    <a href="/"><img class="stallman" src="/img/<?=$img[array_rand($img)];?>" height="100%"></a>
 </body>
 </html>
