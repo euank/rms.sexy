@@ -1,3 +1,6 @@
+This license does NOT apply to the photos. Please see Dr. Richard 
+Stallman's site for the license. https://www.stallman.org/photos/
+
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
