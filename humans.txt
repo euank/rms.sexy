@@ -3,6 +3,6 @@ Just say hi to shodan on rizon if you have images of rms that you want added.
 
 Now with 100% less rotated images!
 
-Also see https://rms.sexy/license.txt
-Also see https://rms.sexy/mail.png - We emailed rms this website 
-Source can be found at https://github.com/Mechazawa/rms.sexy
+License: https://rms.sexy/license.txt
+Source Code: https://github.com/Mechazawa/rms.sexy
+Live Source code: https://rms.sexy/index.php.txt
