@@ -1,9 +1,13 @@
 <?php
 $img = array();
 $handler = opendir('img/');
-while ($file = readdir($handler))
-  if ($file != "." && $file != "..")
+
+while ($file = readdir($handler)) {
+  if ($file != "." && $file != "..") {
     $img[] = $file;
+  }
+}
+
 closedir($handler);
 ?>
 <!DOCTYPE html>
