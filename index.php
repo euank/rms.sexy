@@ -15,30 +15,7 @@ closedir($handler);
 <head>
    <title>Our GNU/Lord and GNU/Savior is 100% sexy!</title>
    <meta http-equiv="refresh" content="3;/"></meta>
-   <style>
-   body {
-     margin: 0;
-     background-image: url("/noise.png");
-   }
-
-   .stallman {
-     text-align: center;
-     position: absolute;
-     margin: auto;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     image-orientation: from-image;
-   }
-
-   .donate {
-     padding: 10px;
-     padding-right: 30px;
-     z-index: 100;
-     position: absolute;
-   }
-   </style>
+   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
    <a href="https://donate.fsf.org/"><img class="donate" src="https://rms.sexy/donate.png" alt="Donate!" title="Donate to the FSF!"></a>
