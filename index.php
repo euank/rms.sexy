@@ -9,11 +9,18 @@ while ($file = readdir($handler)) {
 }
 
 closedir($handler);
+
+$birthday = new DateTime("now", new DateTimeZone('America/Los_Angeles'))->format('m-d') == '03-16';
+$birthday = $birthday || new DateTime("now", new DateTimeZone('Australia/Sydney'))->format('m-d') == '03-16';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+   <?php if($birthday) { ?>
    <title>Our GNU/Lord and GNU/Savior is 100% sexy!</title>
+   <?php } else { ?>
+   <title>Happy GNU/Birthday!</title>
+   <?php } ?>
    <meta http-equiv="refresh" content="3;/"></meta>
    <link rel="stylesheet" href="/style.css">
 </head>
