@@ -16,7 +16,7 @@ $birthday = $birthday || (new DateTime("now", new DateTimeZone('Australia/Sydney
 <!DOCTYPE html>
 <html>
 <head>
-   <?php if($birthday) { ?>
+   <?php if(!$birthday) { ?>
    <title>Our GNU/Lord and GNU/Savior is 100% sexy!</title>
    <?php } else { ?>
    <title>Happy GNU/Birthday!</title>
