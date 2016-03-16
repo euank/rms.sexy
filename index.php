@@ -10,8 +10,8 @@ while ($file = readdir($handler)) {
 
 closedir($handler);
 
-$birthday = new DateTime("now", new DateTimeZone('America/Los_Angeles'))->format('m-d') == '03-16';
-$birthday = $birthday || new DateTime("now", new DateTimeZone('Australia/Sydney'))->format('m-d') == '03-16';
+$birthday = (new DateTime("now", new DateTimeZone('America/Los_Angeles')))->format('m-d') == '03-16';
+$birthday = $birthday || (new DateTime("now", new DateTimeZone('Australia/Sydney')))->format('m-d') == '03-16';
 ?>
 <!DOCTYPE html>
 <html>
