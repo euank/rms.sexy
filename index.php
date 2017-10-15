@@ -22,6 +22,17 @@ $birthday = $birthday || (new DateTime("now", new DateTimeZone('Australia/Sydney
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+The source code, along with the full license text, is available here:
+https://github.com/Mechazawa/rms.sexy
+		-->
 		<meta charset="utf-8">
 		<?php if(!$birthday) { ?>
 		<title>Our GNU/Lord and GNU/Savior is 100% sexy!</title>
@@ -32,6 +43,7 @@ $birthday = $birthday || (new DateTime("now", new DateTimeZone('Australia/Sydney
 		<meta http-equiv="refresh" content="3;/">
 		<?php } ?>
 		<link rel="stylesheet" href="/style.css">
+		<link rel="license" href="/license.txt">
 		<script async src="/script.js"></script>
 	</head>
 	<body>
