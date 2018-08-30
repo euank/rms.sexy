@@ -1,0 +1,27 @@
+[package]
+name = "rms-sexy"
+version = "0.1.0"
+authors = ["Euan Kemp <euank@euank.com>"]
+license = "AGPL-3.0-only"
+
+[dependencies]
+iron = "0.6"
+router = "0.6"
+urlencoded = "0.6"
+staticfile = "0.5"
+mount = "0.4"
+chrono = "0.4"
+lazy_static = "1"
+log = "0.4"
+serde_json = "1.0"
+serde = "1.0"
+rand = "0.5"
+include-repo = "0.1"
+
+[dev-dependencies]
+reqwest = "0.8"
+netns = "0.1.0"
+pnetlink = "0.0.3"
+
+[features]
+integ = []
