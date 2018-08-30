@@ -61,6 +61,7 @@ fn main() {
     router.any("/index.php", index, "backwards-compat-index");
     router.any("/", index, "index");
     router.any("/*", s, "static");
+    router.get("/healthz", healthz, "healthz");
 
     let mut chain = iron::middleware::Chain::new(router);
     chain.link_after(RMS404Handler);
@@ -76,6 +77,10 @@ include_repo_gz!(SOURCE_CODE, ".", ":!**/*.jpg", ":!**/*.JPG", ":!**/*.png");
 
 fn source_code(_: &mut Request) -> IronResult<Response> {
     Ok(Response::with((headers::ContentType(mime::Mime(mime::TopLevel::Application, mime::SubLevel::Ext("gzip".to_string()), vec![])).0, status::Ok, &SOURCE_CODE[..])))
+}
+
+fn healthz(_: &mut Request) -> IronResult<Response> {
+    Ok(Response::with((status::Ok, "healthy")))
 }
 
 fn index(req: &mut Request) -> IronResult<Response> {
