@@ -1,11 +1,4 @@
-// This is free and unencumbered software released into the public domain.
-//
-// Anyone is free to copy, modify, publish, use, compile, sell, or distribute
-// this software, either in source code form or as a compiled binary, for any
-// purpose, commercial or non-commercial, and by any means.
-//
-// The source code, along with the full license text, is available here:
-// https://github.com/Mechazawa/rms.sexy
+// SPDX-License-Identifier: AGPL-3.0-only
 
 (function() {
 	"use strict";
