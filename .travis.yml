@@ -1,0 +1,18 @@
+language: rust
+branches:
+  only:
+  - master
+  - dev
+rust:
+  - stable
+  - nightly
+
+env:
+  global:
+  - RUST_BACKTRACE=1
+
+script:
+- cargo test --all
+- cargo build --all
+- cargo build --release # for integ tests
+- sudo -E $(which cargo) test -v --features integ
