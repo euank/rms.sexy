@@ -35,6 +35,8 @@ lazy_static! {
     static ref IMAGE_JSON: String = serde_json::to_string(&*IMAGES).unwrap();
 }
 
+const INDEX_TEMPLATE: &str = include_str!("index.html.tmpl");
+
 struct RMS404Handler;
 
 impl iron::middleware::AfterMiddleware for RMS404Handler {
@@ -111,40 +113,18 @@ fn index(req: &mut Request) -> IronResult<Response> {
         "Our GNU/Lord and GNU/Savior is 100% sexy!"
     };
 
-    let resp = format!(
-        r#"<!DOCTYPE html>
-<!-- SPDX-License-Identifier: AGPL-3.0-only -->
-<html>
-	<head>
-		<!--
-This program is free software: you can redistribute it and/or  modify
-it under the terms of the GNU Affero General Public License, version 3,
-as published by the Free Software Foundation.
-The source code, along with the full license text, is available here:
-https://github.com/euank/rms.sexy
+    let extra_meta = if js_enabled {
+        ""
+    } else {
+        r#"<meta http-equiv="refresh" content="3;/">"#
+    };
 
-It is also available at "/code.tar.gz" on this server.
-		-->
-		<meta charset="utf-8">
-		<title>{}</title>
-		{}
-		<link rel="stylesheet" href="/style.css">
-		<link rel="license" href="/license.txt">
-		<script async src="/script.js"></script>
-	</head>
-	<body>
-		<a href="https://donate.fsf.org/"><img class="donate" src="/donate.png" alt="Donate!" title="Donate to the FSF!"></a>
-		<a href="/"><img alt="RMS Matthew Stallman" class="stallman" src="{}" height="100%"></a>
-	</body>
-</html>"#,
-        title,
-        if js_enabled {
-            ""
-        } else {
-            r#"<meta http-equiv="refresh" content="3;/">"#
-        },
-        random_image()
-    );
+    // poor man's template engine until we need a real one
+    let resp = INDEX_TEMPLATE
+        .replace("${title}", title)
+        .replace("${extra_meta}", extra_meta)
+        .replace("${img}", random_image());
+    debug_assert!(!resp.contains("${"), "untemplated variables");
     Ok(Response::with((
         headers::ContentType::html().0,
         status::Ok,
